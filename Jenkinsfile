@@ -6,10 +6,10 @@ node {
     stage('Loadtests') {
       parallel (
         "First script": {
-            bat 'k6.exe run loadtests/firstScript.js'
+            sh 'k6.exe run loadtests/firstScript.js'
         },
         "Advanced script": {
-    		bat 'k6.exe run loadtests/advancedScript.js'
+    		sh 'k6.exe run loadtests/advancedScript.js'
         },
       )
     }
