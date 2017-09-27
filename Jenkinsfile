@@ -5,10 +5,10 @@ stage('K6 loadtesting') {
 stage('Loadtests') {
   parallel (
     "First script": {
-        bat 'k6.exe run github.com/sjansson/k6-loadtesting/loadtests/firstScript.js'
+        bat 'k6.exe run loadtests/firstScript.js'
     },
     "Advanced script": {
-		bat 'k6.exe run github.com/sjansson/k6-loadtesting/loadtests/advancedScript.js'
+		bat 'k6.exe run loadtests/advancedScript.js'
     },
   )
 }
